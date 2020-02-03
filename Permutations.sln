@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permutations", "Permutations\Permutations.csproj", "{D23EA393-6128-45A8-9F26-9CD351C8F40D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermutationTester", "PermutationTester\PermutationTester.csproj", "{3C558DF0-425F-46BE-9A79-07C0D717F2F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D23EA393-6128-45A8-9F26-9CD351C8F40D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D23EA393-6128-45A8-9F26-9CD351C8F40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D23EA393-6128-45A8-9F26-9CD351C8F40D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C558DF0-425F-46BE-9A79-07C0D717F2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C558DF0-425F-46BE-9A79-07C0D717F2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C558DF0-425F-46BE-9A79-07C0D717F2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C558DF0-425F-46BE-9A79-07C0D717F2F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
