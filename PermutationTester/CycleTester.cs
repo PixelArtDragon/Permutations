@@ -20,21 +20,6 @@ namespace PermutationTester {
         }
 
         [TestMethod]
-        public void Order() {
-            List<Transposition<int>> transpositions = new List<Transposition<int>> {
-                new Transposition<int>(0, 1),
-                new Transposition<int>(1, 2),
-                new Transposition<int>(2, 3)
-            };
-            Cycle<int> testCycle = new Cycle<int>(transpositions);
-
-            Assert.AreEqual(0, testCycle.GetElement(0));
-            Assert.AreEqual(1, testCycle.GetElement(1));
-            Assert.AreEqual(2, testCycle.GetElement(2));
-            Assert.AreEqual(3, testCycle.GetElement(3));
-        }
-
-        [TestMethod]
         public void ListOutOfOrder() {
             List<Transposition<int>> transpositions = new List<Transposition<int>> {
                 new Transposition<int>(1, 2),
@@ -44,7 +29,7 @@ namespace PermutationTester {
 
             Cycle<int> testCycle = new Cycle<int>(transpositions);
 
-            Assert.AreEqual(3, testCycle.GetElement(2));
+            Assert.AreEqual(3, testCycle.Successor(2));
         }
 
         [TestMethod]
@@ -94,6 +79,28 @@ namespace PermutationTester {
 
             Assert.IsFalse(cycle1.Equals(cycle2));
             Assert.IsFalse(cycle2.Equals(cycle1));
+        }
+
+        [TestMethod]
+        public void SucessorInCycle() {
+            List<Transposition<int>> transpositions = new List<Transposition<int>> {
+                new Transposition<int>(0, 1),
+                new Transposition<int>(1, 2),
+                new Transposition<int>(2, 3)
+            };
+            Cycle<int> testCycle = new Cycle<int>(transpositions);
+            Assert.AreEqual(3, testCycle.Successor(2));
+        }
+
+        [TestMethod]
+        public void SucessorNotInCycle() {
+            List<Transposition<int>> transpositions = new List<Transposition<int>> {
+                new Transposition<int>(0, 1),
+                new Transposition<int>(1, 2),
+                new Transposition<int>(2, 3)
+            };
+            Cycle<int> testCycle = new Cycle<int>(transpositions);
+            Assert.AreEqual(4, testCycle.Successor(4));
         }
     }
 }

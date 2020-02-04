@@ -16,6 +16,13 @@ namespace Permutations {
         public TElement first;
         public TElement second;
 
+        public List<TElement> ToList() {
+            return new List<TElement>() {
+                first,
+                second
+            };
+        }
+
         public static Transposition<TElement> operator -(Transposition<TElement> transposition) {
             return new Transposition<TElement>(transposition.second, transposition.first);
         }
